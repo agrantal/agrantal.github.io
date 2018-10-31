@@ -1,5 +1,6 @@
 ---
 title: "Analysis & Visualization"
+output: html_document
 ---
 
 ## Load and Tidy Data 
