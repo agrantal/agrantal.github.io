@@ -1,0 +1,14 @@
+name: "Yay internet!"
+output_dir: "hw4_ag3911.github.io"
+navbar:
+  title: "Home"
+  right:
+    - text: "About"
+      href: about.html
+    - icon: fa-envelope fa-lg
+      href: mailto:<ahgrantalfieri@bellsouth.net>
+    - icon: fa-github fa-lg
+      href: http://github.com/hw4_ag3911>/
+output:
+  html_document
+  
