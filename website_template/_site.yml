@@ -15,7 +15,6 @@ navbar:
       href: http://github.com/agrantal/
     - icon: fa-linkedin 
       href: https://www.linkedin.com/in/amelia-grant-alfieri-53a8aa85/
-    - icon: 
 
 output:
   html_document
