@@ -1,5 +1,6 @@
 ---
 title: "Homework 4 -- ag3911"
+output: html_document
 ---
 
 # Welcome!  
