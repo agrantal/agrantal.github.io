@@ -1,8 +1,5 @@
 ---
 title: "Homework 4, Amelia Grant-Alfieri, ag3911"
 
-# hyperlinks = [text for link](address.of.link) for example to link to about page on our site: [about](about.html)
-
-# add images: <img src="images/image.jpg" style="width:75%"> if in folder called images
 
 
