@@ -1,0 +1,14 @@
+---
+title: "Data"
+---
+
+### introduction to data and steps you did to clean/tidy/wrangle
+
+Sometimes you need to say a bit about the site -- how it was made, where it's hosted, where the source code can be found. 
+
+If this is for a project or analysis, I recommend giving some details about the R package versions that you used to create the content.
+
+
+hyperlinks = [text for link](address.of.link) for example to link to about page on our site: [about](about.html)
+
+add images: <img src="images/image.jpg" style="width:75%"> if in folder called images

@@ -1,14 +1,22 @@
-name: "Yay internet!"
+name: "Homework 4, Amelia Grant-Alfieri, ag3911"
 output_dir: "hw4_ag3911.github.io"
 navbar:
   title: "Home"
   right:
     - text: "About"
       href: about.html
+    - text: "Data"
+      href: data.html
+    - text: "Analysis"
+      href: analysis.html
     - icon: fa-envelope fa-lg
       href: mailto:<ahgrantalfieri@bellsouth.net>
     - icon: fa-github fa-lg
-      href: http://github.com/hw4_ag3911>/
+      href: http://github.com/agrantal/
+    - icon: fa-linkedin 
+      href: https://www.linkedin.com/in/amelia-grant-alfieri-53a8aa85/
+    - icon: 
+
 output:
   html_document
   

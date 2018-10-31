@@ -2,12 +2,16 @@
 title: "About"
 ---
 
-### About this site
+# About this site
 
-Sometimes you need to say a bit about the site -- how it was made, where it's hosted, where the source code can be found. 
+This website was created using R dplyr and ..... packages. The website is hosted on github. The source code can be found at [My Github Page](https://github.com/agrantal/hw4_ag3911.github.io) 
 
-If this is for a project or analysis, I recommend giving some details about the R package versions that you used to create the content.
+Check out [Data](data.html) to learn more about the dataset we used. 
+Check out [Analysis & Visualization](analysis.html) to learn more about our data analyses and visualizations.  
 
-hyperlinks = [text for link](address.of.link) for example to link to about page on our site: [about](about.html)
 
-add images: <img src="images/image.jpg" style="width:75%"> if in folder called images
+# About Author 
+
+Amelia Grant-Alfieri is a second-year MPH student at Columbia University studying environmental health science. Currently, she is learning R in her Data Science class and is excited to apply it to her future research. 
+
+<img src="hw 4 website/Grant-Alfieri,Amelia_Resume_Winter 2018.pdf" style="width:75%"> 
