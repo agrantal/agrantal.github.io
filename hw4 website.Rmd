@@ -1,0 +1,21 @@
+---
+title: "Homework 4, Amelia Grant-Alfieri, ag3911"
+name: "Yay internet!"
+output_dir: "hw4_ag3911"
+navbar:
+  title: "Home"
+  right:
+    - text: "About"
+      href: about.html
+    - icon: fa-envelope fa-lg
+      href: mailto:<ahgrantalfieri@bellsouth.net>
+    - icon: fa-github fa-lg
+      href: http://github.com/hw4_ag3911>/
+output:
+  html_document
+  
+# hyperlinks = [text for link](address.of.link) for example to link to about page on our site: [about](about.html)
+
+# add images: <img src="images/image.jpg" style="width:75%"> if in folder called images
+
+
