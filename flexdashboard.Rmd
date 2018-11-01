@@ -32,7 +32,7 @@ insta = instacart %>%
     group_by(department) %>%
     summarise(mean = mean(days_since_prior_order)) %>%
     mutate(department = fct_reorder(department, mean)) %>% 
-      plot_ly(x = ~department, y = ~mean, type = "bar", mode = "markers", 
+      plot_ly(x = ~department, y = ~mean, type = "bar", 
             alpha = 0.5, 
             colors = "Set2") %>%
             layout(xaxis = x, yaxis = y)
