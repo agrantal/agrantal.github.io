@@ -11,6 +11,7 @@ library(tidyverse)
 library(viridis)
 library(p8105.datasets)
 library(plotly)
+library(flexdashboard)
 set.seed(1)
 p8105.datasets::instacart
 ```

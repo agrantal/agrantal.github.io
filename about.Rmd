@@ -15,8 +15,16 @@ Check out [Analysis & Visualization](analysis.html) to learn more about our data
 
 Amelia Grant-Alfieri is a second-year MPH student at Columbia University studying environmental health science. Currently, she is learning R in her Data Science class and is excited to apply it to her future research. 
 
-```{r, out.width="0.3\\linewidth", include=TRUE, fig.align="center", fig.cap=c("your caption"), echo=FALSE}
-library(knitr)
-library(tidyverse)
-knitr::include_graphics("./hw 4 website/Grant-Alfieri,Amelia_Resume_Winter 2018.pdf")
-```
+Resume items in bulletpointed list: 
+
+
+
+
+
+
+
+
+
+
+
+
