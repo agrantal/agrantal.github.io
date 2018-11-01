@@ -6,7 +6,7 @@ navbar:
     - text: "About"
       href: about.html
     - text: "Data"
-      href: data.html
+      href: data.html 
     - text: "Analysis"
       href: analysis.html
     - icon: fa-envelope fa-lg

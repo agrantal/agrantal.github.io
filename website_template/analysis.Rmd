@@ -5,7 +5,7 @@ output: html_document
 
 ## Load and Tidy Data 
 
-Use one of the following datasets, and load from the p8105.datasets package: Instacart, NY NOAA, or NYC Restaurant Inspections. These datasets are large; you may want / need to filter or randomly sample from the complete dataset to ensure a reasonable product.
+Use one of the following datasets, and load from the p8105.datasets package: Instacart, NY NOAA, or NYC Restaurant Inspections. These datasets are large; you may want / need to filter or randomly sample from the complete dataset to ensure a reasonable product. 
 
 ```{r}
 p8105.datasets::nyc_airbnb
