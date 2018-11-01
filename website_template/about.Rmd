@@ -5,7 +5,7 @@ output: html_document
 
 # About this site
 
-This website was created using R dplyr and ..... packages. The website is hosted on github. The source code can be found at [My Github Page](https://github.com/agrantal/hw4_ag3911.github.io) 
+This website was created using R tidyverse, p8105.datasets, viridis, knitr, and flexdashboard packages. The website is hosted on github. The source code can be found at [My Github Page](https://github.com/agrantal/hw4_ag3911.github.io) 
 
 Check out [Data](data.html) to learn more about the dataset we used. 
 Check out [Analysis & Visualization](analysis.html) to learn more about our data analyses and visualizations.  
