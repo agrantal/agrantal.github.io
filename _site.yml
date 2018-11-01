@@ -1,5 +1,5 @@
 name: "Homework 4, Amelia Grant-Alfieri, ag3911"
-output_dir: "hw4_ag3911.github.io"
+output_dir: "."
 navbar:
   title: "Home"
   right:

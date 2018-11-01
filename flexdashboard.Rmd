@@ -19,9 +19,9 @@ p8105.datasets::instacart
 Column {data-width=650}
 -----------------------------------------------------------------------
 
-### Mean Number of Days Since Prior Order per Department 
+### Mean Number of Days Since Prior Order by Department 
 
-```{r}
+```{r include=FALSE}
 x = list(title = "Department")
 y = list(title = "Mean Number of Days Since Prior Order")
 
