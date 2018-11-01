@@ -1,9 +1,0 @@
----
-title: "Data"
-output: html_document
----
-
-### introduction to data and steps you did to clean/tidy/wrangle
-
-
-
