@@ -67,7 +67,7 @@ set.seed(1)
 perish_np = instacart %>% 
     janitor::clean_names() %>%
     filter(department == "produce" | department == "meat seafood" | department == "dairy eggs" | department == "international" | department == "pantry" | department == "snacks" | department == "canned goods" | department == "alcohol" | department == "bakery" | department == "babies" | department == "breakfast" |  department == "frozen" |  department == "bulk" | department == "dry goods pasta" | department == "beverages" |  department == "deli") %>%
-    sample_n(2000) %>%
+    sample_n(500) %>%
     select(-add_to_cart_order, -eval_set, -aisle, -aisle_id, -department_id, -order_hour_of_day, -order_dow)
 perish_np %>%
   mutate(department = fct_reorder(department, days_since_prior_order)) %>% 
