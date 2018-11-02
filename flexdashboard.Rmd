@@ -55,12 +55,13 @@ instacart %>%
             layout(xaxis = c, yaxis = d) 
 ```
 
+
 Column {data-width=550}
 -----------------------------------------------------------------------
 
 ### Number of Days Since Last Order by Department with Food Items  
 
-```{r include=FALSE}
+```{r}
 x = list(title = "Department")
 y = list(title = "Number of Days Since Prior Order")
 set.seed(1)
