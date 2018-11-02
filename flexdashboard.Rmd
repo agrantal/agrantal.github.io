@@ -13,30 +13,10 @@ library(p8105.datasets)
 library(plotly)
 library(flexdashboard)
 p8105.datasets::instacart
-set.seed(1)
 ```
 
-Column {data-width=650}
------------------------------------------------------------------------
 
-### Number of Days Since Last Order by Department with Food Items  
-
-```{r include=FALSE}
-x = list(title = "Department")
-y = list(title = "Number of Days Since Prior Order")
-
-instacart %>% 
-    janitor::clean_names() %>%
-    filter(department == "produce" | department == "meat seafood" | department == "dairy eggs" | department == "international" | department == "pantry" | department == "snacks" | department == "canned goods" | department == "alcohol" | department == "bakery" | department == "babies" | department == "breakfast" |  department == "frozen" |  department == "bulk" | department == "dry goods pasta" | department == "beverages" |  department == "deli") %>%
-    #group_by(department) %>%
-    #summarise(mean = mean(days_since_prior_order)) %>%
-    mutate(department = fct_reorder(department, days_since_prior_order)) %>% 
-    plot_ly(x = ~department, y = ~days_since_prior_order, type = "box", 
-            alpha = 0.5) %>%
-            layout(xaxis = x, yaxis = y)
-```
-
-Column {data-width=350}
+Column {data-width=450}
 -----------------------------------------------------------------------
 
 ### Number of People Purchasing Alcohol per Hour  
@@ -73,4 +53,25 @@ instacart %>%
     plot_ly(x = ~order_dow, y = ~n, type = "bar", 
             alpha = 0.5) %>%
             layout(xaxis = c, yaxis = d)
+```
+
+Column {data-width=550}
+-----------------------------------------------------------------------
+
+### Number of Days Since Last Order by Department with Food Items  
+
+```{r include=FALSE}
+x = list(title = "Department")
+y = list(title = "Number of Days Since Prior Order")
+set.seed(1)
+perish_np = instacart %>% 
+    janitor::clean_names() %>%
+    filter(department == "produce" | department == "meat seafood" | department == "dairy eggs" | department == "international" | department == "pantry" | department == "snacks" | department == "canned goods" | department == "alcohol" | department == "bakery" | department == "babies" | department == "breakfast" |  department == "frozen" |  department == "bulk" | department == "dry goods pasta" | department == "beverages" |  department == "deli") %>%
+    sample_n(2000) %>%
+    select(-add_to_cart_order, -eval_set, -aisle, -aisle_id, -department_id, -order_hour_of_day, -order_dow)
+perish_np %>%
+  mutate(department = fct_reorder(department, days_since_prior_order)) %>% 
+  plot_ly(x = ~department, y = ~days_since_prior_order, type = "box", 
+            alpha = 0.5) %>%
+            layout(xaxis = x, yaxis = y)
 ```

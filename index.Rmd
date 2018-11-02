@@ -3,9 +3,9 @@ title: "Amelia Grant-Alfieri"
 output: html_document
 ---
 
-# Welcome!  
+### Welcome!  
 
-Feel free to click on each tab to learn how I tidied, data, and visualized some data!
+Feel free to click on each tab to see my neat data visualizations and to learn a bit about me.  
 
 Happy Fall! 
 
