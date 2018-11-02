@@ -47,12 +47,12 @@ instacart %>%
     select(department, order_dow, order_id) %>%
     filter(department == "alcohol") %>%
     mutate(order_dow = as.character(order_dow)) %>%
-    mutate(order_dow = recode(order_dow, `0` = "Sunday", `1` = "Monday", `2` = "Tuesday", `3` ="Wednesday", `4` = "Thursday", `5` = "Friday", `6` = "Saturday")) %>%
+    mutate(order_dow = recode(order_dow, `0` = "Sunday", `1` = "Monday", `2` = "Tuesday", `3` = "Wednesday", `4` = "Thursday", `5` = "Friday", `6` = "Saturday")) %>%
     group_by(order_dow) %>%
     count(n = n_distinct(order_id)) %>%
     plot_ly(x = ~order_dow, y = ~n, type = "bar", 
             alpha = 0.5) %>%
-            layout(xaxis = c, yaxis = d)
+            layout(xaxis = c, yaxis = d) 
 ```
 
 Column {data-width=550}
