@@ -1,8 +1,12 @@
 ---
-title: "Homework 4 -- ag3911"
+title: "Amelia Grant-Alfieri"
 output: html_document
 ---
 
 # Welcome!  
 
-Feel free to click on each tab to learn how I tidied, data, and visualized some data!  
+Feel free to click on each tab to learn how I tidied, data, and visualized some data!
+
+Happy Fall! 
+
+<img src="leaf.jpg" style="width:30%">

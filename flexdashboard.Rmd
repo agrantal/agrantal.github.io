@@ -19,7 +19,7 @@ set.seed(1)
 Column {data-width=650}
 -----------------------------------------------------------------------
 
-### Number of Days Since Prior Order by Department with Food Items  
+### Number of Days Since Last Order by Department with Food Items  
 
 ```{r include=FALSE}
 x = list(title = "Department")
@@ -39,7 +39,7 @@ instacart %>%
 Column {data-width=350}
 -----------------------------------------------------------------------
 
-### Number of People Purchasing Alcohol Purchases by Hour  
+### Number of People Purchasing Alcohol per Hour  
 
 ```{r}
 a = list(title = "Hour of the Day")
@@ -51,27 +51,26 @@ instacart %>%
     filter(department == "alcohol") %>%
     group_by(order_hour_of_day) %>%
     count(n = n_distinct(order_id)) %>%
-    plot_ly(x = ~order_hour_of_day, y = ~n, type = "scatter", mode = "markers", 
+    plot_ly(x = ~order_hour_of_day, y = ~n, type = "scatter", mode = "marker", 
             alpha = 0.5) %>%
             layout(xaxis = a, yaxis = b)
 ```
 
-### Number of People Purchasing Alcohol by Day of the Week 
+### Number of People Purchasing Alcohol per Day of the Week 
 
 ```{r}
-a = list(title = "Day of the Week")
-b = list(title = "Number of Customers")
+c = list(title = "Day of the Week")
+d = list(title = "Number of Customers")
 
 instacart %>% 
     janitor::clean_names() %>%
     select(department, order_dow, order_id) %>%
     filter(department == "alcohol") %>%
-    mutate(order_dow = as.char(order_dow)) %>%
-    recode(order_dow, 0 = "Sunday", 1 = "Monday", 2 = "Tuesday", 3 = "Wednesday", 4 = "Thursday", 5 = "Friday", 6 = "Saturday") %>% 
+    mutate(order_dow = as.character(order_dow)) %>%
+    mutate(order_dow = recode(order_dow, `0` = "Sunday", `1` = "Monday", `2` = "Tuesday", `3` ="Wednesday", `4` = "Thursday", `5` = "Friday", `6` = "Saturday")) %>%
     group_by(order_dow) %>%
     count(n = n_distinct(order_id)) %>%
-    plot_ly(x = ~order_dow, y = ~n, type = "scatter", mode = "markers", 
+    plot_ly(x = ~order_dow, y = ~n, type = "bar", 
             alpha = 0.5) %>%
-            layout(xaxis = a, yaxis = b)
-
+            layout(xaxis = c, yaxis = d)
 ```
