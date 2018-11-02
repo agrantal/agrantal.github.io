@@ -12,44 +12,66 @@ library(viridis)
 library(p8105.datasets)
 library(plotly)
 library(flexdashboard)
-set.seed(1)
 p8105.datasets::instacart
+set.seed(1)
 ```
 
 Column {data-width=650}
 -----------------------------------------------------------------------
 
-### Mean Number of Days Since Prior Order by Department 
+### Number of Days Since Prior Order by Department with Food Items  
 
 ```{r include=FALSE}
 x = list(title = "Department")
-y = list(title = "Mean Number of Days Since Prior Order")
+y = list(title = "Number of Days Since Prior Order")
 
-insta = instacart %>% 
+instacart %>% 
     janitor::clean_names() %>%
-    select(department, days_since_prior_order) %>%
     filter(department == "produce" | department == "meat seafood" | department == "dairy eggs" | department == "international" | department == "pantry" | department == "snacks" | department == "canned goods" | department == "alcohol" | department == "bakery" | department == "babies" | department == "breakfast" |  department == "frozen" |  department == "bulk" | department == "dry goods pasta" | department == "beverages" |  department == "deli") %>%
-    group_by(department) %>%
-    summarise(mean = mean(days_since_prior_order)) %>%
-    mutate(department = fct_reorder(department, mean)) %>% 
-      plot_ly(x = ~department, y = ~mean, type = "bar", 
-            alpha = 0.5, 
-            colors = "Set2") %>%
+    #group_by(department) %>%
+    #summarise(mean = mean(days_since_prior_order)) %>%
+    mutate(department = fct_reorder(department, days_since_prior_order)) %>% 
+    plot_ly(x = ~department, y = ~days_since_prior_order, type = "box", 
+            alpha = 0.5) %>%
             layout(xaxis = x, yaxis = y)
-insta
 ```
 
 Column {data-width=350}
 -----------------------------------------------------------------------
 
-### Chart B
+### Number of People Purchasing Alcohol Purchases by Hour  
 
 ```{r}
+a = list(title = "Hour of the Day")
+b = list(title = "Number of Customers")
 
+instacart %>% 
+    janitor::clean_names() %>%
+    select(department, order_hour_of_day, order_id) %>%
+    filter(department == "alcohol") %>%
+    group_by(order_hour_of_day) %>%
+    count(n = n_distinct(order_id)) %>%
+    plot_ly(x = ~order_hour_of_day, y = ~n, type = "scatter", mode = "markers", 
+            alpha = 0.5) %>%
+            layout(xaxis = a, yaxis = b)
 ```
 
-### Chart C
+### Number of People Purchasing Alcohol by Day of the Week 
 
 ```{r}
+a = list(title = "Day of the Week")
+b = list(title = "Number of Customers")
+
+instacart %>% 
+    janitor::clean_names() %>%
+    select(department, order_dow, order_id) %>%
+    filter(department == "alcohol") %>%
+    mutate(order_dow = as.char(order_dow)) %>%
+    recode(order_dow, 0 = "Sunday", 1 = "Monday", 2 = "Tuesday", 3 = "Wednesday", 4 = "Thursday", 5 = "Friday", 6 = "Saturday") %>% 
+    group_by(order_dow) %>%
+    count(n = n_distinct(order_id)) %>%
+    plot_ly(x = ~order_dow, y = ~n, type = "scatter", mode = "markers", 
+            alpha = 0.5) %>%
+            layout(xaxis = a, yaxis = b)
 
 ```
